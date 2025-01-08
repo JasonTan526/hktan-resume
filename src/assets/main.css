@@ -1,0 +1,7 @@
+@import './base.css';
+
+body {
+	background-color: rgb(15 23 42) !important;
+	/* background: radial-gradient(600px at 124px 295px, rgba(29, 78, 216, 0.15), transparent 80%); */
+	overflow-x: hidden;
+}
