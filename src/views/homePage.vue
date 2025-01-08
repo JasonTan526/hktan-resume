@@ -4,7 +4,7 @@
 	</div> -->
 
 	<div class="w-full py-5 px-3 px-md-5 py-xl-0">
-		<div class="w-full d-flex flex-colum">
+		<div class="w-full d-flex flex-colum main_container">
 			<div>
 
 			</div>
@@ -48,5 +48,12 @@ export default {
 	height: 600px;
 	background: radial-gradient(rgba(29, 78, 216, 0.15), transparent 80%);
 	filter: blur(20px);
+}
+
+/* CSS after 1024 px */
+@media (min-width: 1024px) {
+	.main_container {
+		flex-direction: row;
+	}
 }
 </style>
