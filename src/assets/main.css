@@ -2,15 +2,74 @@
 
 body {
 	background-color: rgb(15 23 42) !important;
-	/* background: radial-gradient(600px at 124px 295px, rgba(29, 78, 216, 0.15), transparent 80%); */
+	/* background: radial-gradient(600px at 561px 282px, rgba(29, 78, 216, 0.15), transparent 80%); */
 	overflow-x: hidden;
 }
 
-/* Width CSS */
-.w-45 {
-	width: 45%;
+/* Background CSS */
+.bg-Normal {
+	background-color: rgba(15, 23, 42);
 }
 
-.w-48 {
-	width: 48%;
+/* Color CSS */
+.color-Header {
+	color: rgb(226 232 240);
+}
+
+.color-Normal {
+	color: rgb(148 163 184);
+}
+
+/* Cursor CSS */
+.pointer {
+	cursor: pointer;
+}
+
+/* Margin CSS */
+.mt-10 {
+	margin-top: 6rem;
+}
+
+/* Max Width CSS */
+.max-w-xl {
+	max-width: 1280px;
+}
+
+/* Min Height CSS */
+.min-h-100 {
+	min-height: 100vh;
+}
+
+/* Padding CSS */
+.py-10 {
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+}
+
+/* Width CSS */
+
+
+/* CSS after 992px */
+@media (min-width: 992px) {
+
+	/* Body */
+	body {
+		background: unset;
+	}
+
+	/* Margin */
+	.mt-lg-10 {
+		margin-top: 6rem;
+	}
+
+	/* Padding */
+	.py-lg-10 {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+
+	/* Width */
+	.w-lg-48 {
+		width: 48% !important;
+	}
 }
