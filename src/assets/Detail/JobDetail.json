@@ -1,0 +1,76 @@
+[
+	{
+		"JobTitle": "Software Engineer Intern",
+		"Company": "Documation Sdn. Bhd",
+		"StartDate": "Oct",
+		"EndDate": "Dec 2021",
+		"JobDescription": {
+			"en": "English",
+			"zh": "中文"
+		},
+		"SkillTool": [
+			"ReactAdmin",
+			"HTML",
+			"CSS",
+			"JavaScript"
+		]
+	},
+	{
+		"JobTitle": "Software Engineer Intern",
+		"Company": "goSMAC Sdn. Bhd",
+		"StartDate": "Sept",
+		"EndDate": "Dec 2022",
+		"JobDescription": {
+			"en": "English",
+			"zh": "中文"
+		},
+		"SkillTool": [
+			"Laravel",
+			"PHP",
+			"HTML",
+			"CSS",
+			"JavaScript"
+		]
+	},
+	{
+		"JobTitle": "Software Engineer Training",
+		"Company": "Multiverse Sdn. Bhd",
+		"StartDate": "Dec 2023",
+		"EndDate": "Jan 2024",
+		"JobDescription": {
+			"en": "English",
+			"zh": "中文"
+		},
+		"SkillTool": [
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"MySQL",
+			"jQuery",
+			"Postman"
+		]
+	},
+	{
+		"JobTitle": "Software Engineer",
+		"Company": "Infinity Rising Sdn. Bhd",
+		"StartDate": "June 2024",
+		"EndDate": "Jan 2025",
+		"JobDescription": {
+			"en": "English",
+			"zh": "中文"
+		},
+		"SkillTool": [
+			"Vuejs",
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"MySQL",
+			"jQuery",
+			"ExpressJs",
+			"Wordpress",
+			"Elementor",
+			"Divi",
+			"Wix"
+		]
+	}
+]

@@ -1,0 +1,20 @@
+[
+	{
+		"CourseName": "Science Stream",
+		"SchoolName": "Sekolah Menengah Sri Omega",
+		"StartDate": "Jan 2013",
+		"EndDate": "Dec 2017"
+	},
+	{
+		"CourseName": "Science Stream A-level",
+		"SchoolName": "Crescendo International Collage",
+		"StartDate": "Jan 2018",
+		"EndDate": "June 2019"
+	},
+	{
+		"CourseName": "Bachelor in Computer Engineer (Major in artificial Intelligence)",
+		"SchoolName": "UCSI University",
+		"StartDate": "Jan 2020",
+		"EndDate": "Nov 2023"
+	}
+]

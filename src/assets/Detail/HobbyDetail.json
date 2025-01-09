@@ -1,0 +1,32 @@
+{
+	"hobbies": [
+		{
+			"en": "Coding",
+			"zh": "编程"
+		},
+		{
+			"en": "Badminton",
+			"zh": "羽毛球"
+		},
+		{
+			"en": "Swimming",
+			"zh": "游泳"
+		},
+		{
+			"en": "Reading",
+			"zh": "阅读"
+		},
+		{
+			"en": "Piano",
+			"zh": "钢琴"
+		},
+		{
+			"en": "Guitar",
+			"zh": "吉他"
+		},
+		{
+			"en": "Travelling",
+			"zh": "旅行"
+		}
+	]
+}

@@ -205,13 +205,16 @@
 </template>
 
 <script>
+import JobDetail from '@/assets/Detail/JobDetail.json'
+
 export default {
 	data() {
 		return {
 			x: 0,
 			y: 0,
 			isZH: false,
-			activeItem: ''
+			activeItem: '',
+			JobDetail: JobDetail
 		};
 	},
 	methods: {
@@ -242,6 +245,7 @@ export default {
 	},
 	mounted() {
 		window.addEventListener('mousemove', this.update);
+		console.log(this.JobDetail)
 	},
 	beforeDestroy() {
 		window.removeEventListener('mousemove', this.update);

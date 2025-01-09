@@ -1,0 +1,31 @@
+[
+	{
+		"AICoding": [
+			"Python",
+			"PyTorch",
+			"TensorFlow",
+			"CV",
+			"MATLAB",
+			"YOLO"
+		],
+		"WebCoding": [
+			"Vuejs",
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"Laravel",
+			"PHP",
+			"ReactAdmin",
+			"MySQL",
+			"jQuery",
+			"ExpressJs"
+		],
+		"Tool": [
+			"PhpMAdmin",
+			"Postman",
+			"Figma",
+			"Wordpress",
+			"Roboflow"
+		]
+	}
+]
