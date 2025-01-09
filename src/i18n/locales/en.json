@@ -1,3 +1,13 @@
 {
-	"about": "about"
+	"about": "about",
+	"education": "education",
+	"skill": "skill",
+	"project": "project",
+	"hobby": "hobby",
+	"reference": "reference",
+	"short-description": "I design and implement seamless, user-focused digital experiences by combining expertise in front-end development and cutting-edge AI/ML solutions.",
+	"Icanbe": "I can be",
+	"or": "or",
+	"Job1": "AI/ML Engineer",
+	"Job2": "Front-End Engineer"
 }

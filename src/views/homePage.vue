@@ -5,7 +5,7 @@
 	</div> -->
 
 	<div class="w-full py-5 px-3 px-md-5 py-lg-0">
-		<div class="w-full d-flex flex-column max-w-xl min-h-100 mx-auto main_container position-relative flex-lg-row">
+		<div class="w-full d-flex flex-column max-w-xl min-vh-100 mx-auto main_container position-relative flex-lg-row">
 			<div class="w-lg-48 py-lg-10 vh-lg-100 sticky-top-lg">
 				<div class="h-lg-100 d-flex flex-column justify-content-between">
 					<div>
@@ -13,36 +13,33 @@
 							Jason Tan Heng Kern
 						</h1>
 						<h6 class="color-Normal mt-3 mb-0">
-							I can be <b class="color-Header">AI/ML Engineer</b> or <b class="color-Header">Front-End
-								Engineer</b>
+							{{ $t('Icanbe') }} <b class="color-Header">{{ $t('Job1') }}</b> {{ $t('or') }} <b
+								class="color-Header">{{ $t('Job2') }}</b>
 						</h6>
 
-						<p class="color-Normal mt-4 mb-0" style="max-width: 30rem;">
-							I design and implement seamless, user-focused digital experiences by combining expertise in
-							front-end development and cutting-edge AI/ML solutions.
+						<p class="color-Normal mt-4 mb-0" style="max-width: 30rem; min-height: 80px;">
+							{{ $t('short-description') }}
 						</p>
 
 						<div class="d-lg-flex flex-column gap-3 mt-5" style="display: none;">
-							<div>
-								<div class="text-uppercase color-Normal fw-bold pointer">
-									{{ $t('about') }}
-								</div>
+							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
+								{{ $t('about') }}
 							</div>
 
-							<div class="text-uppercase color-Normal fw-bold pointer">
-								educationn
+							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
+								{{ $t('education') }}
 							</div>
-							<div class="text-uppercase color-Normal fw-bold pointer">
-								skill
+							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
+								{{ $t('skill') }}
 							</div>
-							<div class="text-uppercase color-Normal fw-bold pointer">
-								project
+							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
+								{{ $t('project') }}
 							</div>
-							<div class="text-uppercase color-Normal fw-bold pointer">
-								hobby
+							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
+								{{ $t('hobby') }}
 							</div>
-							<div class="text-uppercase color-Normal fw-bold pointer">
-								reference
+							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
+								{{ $t('reference') }}
 							</div>
 						</div>
 					</div>
@@ -51,10 +48,11 @@
 						<div class="d-flex flex-column">
 							<div>
 								<div class="form-check form-switch">
-									<input class="form-check-input" type="checkbox" role="switch"
+									<input class="form-check-input pointer" type="checkbox" role="switch"
 										id="flexSwitchCheckChecked" v-model="isZH" @change="toggleLocale">
-									<label class="form-check-label color-Header fw-bold" for="flexSwitchCheckChecked">{{
-										isZH ? '中文' : 'EN' }}</label>
+									<label class="form-check-label color-Header fw-bold pointer user-select-none"
+										for="flexSwitchCheckChecked">{{
+											isZH ? '中文' : 'EN' }}</label>
 								</div>
 							</div>
 
@@ -224,11 +222,19 @@ export default {
 .contact_icon {
 	fill: rgb(148 163 184);
 	width: 30px;
-	transition: all 0.5s;
+	transition: all 0.3s;
 }
 
 .contact_icon:hover {
-	fill: rgb(226 232 240)
+	fill: rgb(226 232 240);
+}
+
+.contentTitle {
+	transition: all 0.1s;
+}
+
+.contentTitle:hover {
+	color: rgb(226 232 240) !important;
 }
 
 /* CSS after 992 px */
