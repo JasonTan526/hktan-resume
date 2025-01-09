@@ -57,6 +57,15 @@ body {
 		background: unset;
 	}
 
+	/* Height */
+	.h-lg-100 {
+		height: 100%;
+	}
+
+	.vh-lg-100 {
+		height: 100vh;
+	}
+
 	/* Margin */
 	.mt-lg-10 {
 		margin-top: 6rem;
@@ -66,6 +75,14 @@ body {
 	.py-lg-10 {
 		padding-top: 6rem;
 		padding-bottom: 6rem;
+	}
+
+	/* Sticky */
+	.sticky-top-lg {
+		position: sticky;
+		top: 0;
+		z-index: 1020;
+		/* Same z-index as Bootstrap's sticky-top */
 	}
 
 	/* Width */

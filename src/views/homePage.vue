@@ -6,8 +6,8 @@
 
 	<div class="w-full py-5 px-3 px-md-5 py-lg-0">
 		<div class="w-full d-flex flex-column max-w-xl min-h-100 mx-auto main_container position-relative flex-lg-row">
-			<div class="w-lg-48 py-lg-10 vh-100 sticky-top">
-				<div class="h-100 d-flex flex-column justify-content-between">
+			<div class="w-lg-48 py-lg-10 vh-lg-100 sticky-top-lg">
+				<div class="h-lg-100 d-flex flex-column justify-content-between">
 					<div>
 						<h1 class="fw-bold color-Header mb-0">
 							Jason Tan Heng Kern
@@ -54,25 +54,11 @@
 							</a>
 						</div>
 					</div>
-
 				</div>
-
 			</div>
 
 			<div class="w-lg-48 py-10 ms-auto">
-				<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
-					about
-				</h6>
-
-				<p class="color-Normal">
-					Dedicated and enthusiastic person who has recently completed a four-year study program in
-					<b class="color-Header"> Computer Engineering</b>,
-					specialising in
-					<b class="color-Header"> Artificial Intelligence</b>,
-					at UCSI University.
-				</p>
-
-				<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
+				<h6 class=" text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
 					about
 				</h6>
 
