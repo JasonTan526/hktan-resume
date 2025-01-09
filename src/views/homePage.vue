@@ -6,7 +6,7 @@
 
 	<div class="w-full py-5 px-3 px-md-5 py-lg-0">
 		<div class="w-full d-flex flex-column max-w-xl min-vh-100 mx-auto main_container position-relative flex-lg-row">
-			<div class="w-lg-48 py-lg-10 vh-lg-100 sticky-top-lg">
+			<div class="w-lg-48 py-lg-10 vh-lg-100 sticky-lg-top">
 				<div class="h-lg-100 d-flex flex-column justify-content-between">
 					<div>
 						<h1 class="fw-bold color-Header mb-0">
@@ -22,24 +22,46 @@
 						</p>
 
 						<div class="d-lg-flex flex-column gap-3 mt-5" style="display: none;">
-							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
-								{{ $t('about') }}
+							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
+								:style="getItemStyle('about')" @click="setActiveItem('about')">
+								<!-- Tail element before the text -->
+								<span :style="getTailStyle('about')" class="item-tail"></span>
+								{{ getItemText('about') }}
 							</div>
 
-							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
-								{{ $t('education') }}
+							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
+								:style="getItemStyle('education')" @click="setActiveItem('education')">
+								<!-- Tail element before the text -->
+								<span :style="getTailStyle('education')" class="item-tail"></span>
+								{{ getItemText('education') }}
 							</div>
-							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
-								{{ $t('skill') }}
+
+							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
+								:style="getItemStyle('skill')" @click="setActiveItem('skill')">
+								<!-- Tail element before the text -->
+								<span :style="getTailStyle('skill')" class="item-tail"></span>
+								{{ getItemText('skill') }}
 							</div>
-							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
-								{{ $t('project') }}
+
+							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
+								:style="getItemStyle('project')" @click="setActiveItem('project')">
+								<!-- Tail element before the text -->
+								<span :style="getTailStyle('project')" class="item-tail"></span>
+								{{ getItemText('project') }}
 							</div>
-							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
-								{{ $t('hobby') }}
+
+							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
+								:style="getItemStyle('hobby')" @click="setActiveItem('hobby')">
+								<!-- Tail element before the text -->
+								<span :style="getTailStyle('hobby')" class="item-tail"></span>
+								{{ getItemText('hobby') }}
 							</div>
-							<div class="text-uppercase color-Normal fw-bold pointer contentTitle user-select-none">
-								{{ $t('reference') }}
+
+							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
+								:style="getItemStyle('reference')" @click="setActiveItem('reference')">
+								<!-- Tail element before the text -->
+								<span :style="getTailStyle('reference')" class="item-tail"></span>
+								{{ getItemText('reference') }}
 							</div>
 						</div>
 					</div>
@@ -189,6 +211,7 @@ export default {
 			x: 0,
 			y: 0,
 			isZH: false,
+			activeItem: ''
 		};
 	},
 	methods: {
@@ -199,6 +222,23 @@ export default {
 		toggleLocale() {
 			this.$i18n.locale = this.isZH ? 'zh' : 'en';
 		},
+		setActiveItem(item) {
+			this.activeItem = item;
+		},
+		getItemStyle(item) {
+			return {
+				color: this.activeItem === item ? 'rgb(226 232 240)' : 'rgb(148 163 184)'
+			};
+		},
+		getTailStyle(item) {
+			return {
+				width: this.activeItem === item ? '60px' : '30px',
+				backgroundColor: this.activeItem === item ? 'rgb(226 232 240)' : 'rgb(148 163 184)',
+			};
+		},
+		getItemText(item) {
+			return this.$t(item);
+		}
 	},
 	mounted() {
 		window.addEventListener('mousemove', this.update);
@@ -235,6 +275,20 @@ export default {
 
 .contentTitle:hover {
 	color: rgb(226 232 240) !important;
+}
+
+.item-tail {
+	display: inline-block;
+	height: 1px;
+	margin-right: 10px;
+	width: 30px;
+	background-color: rgb(148, 163, 184);
+	transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.contentTitle:hover .item-tail {
+	width: 60px !important;
+	background-color: rgb(226, 232, 240) !important;
 }
 
 /* CSS after 992 px */

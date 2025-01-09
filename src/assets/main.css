@@ -41,9 +41,6 @@ body {
 	padding-bottom: 6rem;
 }
 
-/* Width CSS */
-
-
 /* CSS after 992px */
 @media (min-width: 992px) {
 
@@ -73,11 +70,10 @@ body {
 	}
 
 	/* Sticky */
-	.sticky-top-lg {
+	.sticky-lg-top {
 		position: sticky;
 		top: 0;
 		z-index: 1020;
-		/* Same z-index as Bootstrap's sticky-top */
 	}
 
 	/* Width */
