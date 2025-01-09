@@ -2,6 +2,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import VueLazyload from 'vue-lazyload';
+import i18n from './i18n';
 
 // Main CSS
 import './assets/main.css'
@@ -14,6 +15,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const app = createApp(App);
 
 // Use App
+app.use(i18n);
 
 // Vue Lazy Load
 app.use(VueLazyload, {
