@@ -78,7 +78,6 @@
 								</div>
 							</div>
 
-
 							<div class="d-flex gap-3 mt-4">
 								<a href="https://github.com/JasonTan526" target="_blank">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
@@ -88,7 +87,6 @@
 										</path>
 									</svg>
 								</a>
-
 
 								<a href="https://www.linkedin.com/in/jason-heng-kern-tan-1271932a2/" target="_blank">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -108,96 +106,109 @@
 									</svg>
 								</a>
 							</div>
-
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="w-lg-48 py-10 ms-auto">
-				<h6 class=" text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
-					about
-				</h6>
+				<div class="pb-5">
+					<h6 class=" text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+						about
+					</h6>
 
-				<p class="color-Normal">
-					Dedicated and enthusiastic person who has recently completed a four-year study program in
-					<b class="color-Header"> Computer Engineering</b>,
-					specialising in
-					<b class="color-Header"> Artificial Intelligence</b>,
-					at UCSI University.
-				</p>
+					<p class="color-Normal">
+						Dedicated and enthusiastic person who has recently completed a four-year study program in
+						<b class="color-Header"> Computer Engineering</b>,
+						specialising in
+						<b class="color-Header"> Artificial Intelligence</b>,
+						at UCSI University.
+					</p>
+				</div>
 
-				<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
-					education
-				</h6>
+				<div class="pb-5">
+					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+						education
+					</h6>
 
-				<p class="color-Normal">
-					Dedicated and enthusiastic person who has recently completed a four-year study program in
-					<b class="color-Header"> Computer Engineering</b>,
-					specialising in
-					<b class="color-Header"> Artificial Intelligence</b>,
-					at UCSI University.
-				</p>
+					<p class="color-Normal">
+						Dedicated and enthusiastic person who has recently completed a four-year study program in
+						<b class="color-Header"> Computer Engineering</b>,
+						specialising in
+						<b class="color-Header"> Artificial Intelligence</b>,
+						at UCSI University.
+					</p>
+				</div>
 
-				<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
-					experience
-				</h6>
+				<div class="pb-5">
+					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+						experience
+					</h6>
 
-				<p class="color-Normal">
-					Dedicated and enthusiastic person who has recently completed a four-year study program in
-					<b class="color-Header"> Computer Engineering</b>,
-					specialising in
-					<b class="color-Header"> Artificial Intelligence</b>,
-					at UCSI University.
-				</p>
+					<p class="color-Normal">
+						Dedicated and enthusiastic person who has recently completed a four-year study program in
+						<b class="color-Header"> Computer Engineering</b>,
+						specialising in
+						<b class="color-Header"> Artificial Intelligence</b>,
+						at UCSI University.
+					</p>
+				</div>
 
-				<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
-					skill
-				</h6>
+				<div class="pb-5">
+					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+						skill
+					</h6>
 
-				<p class="color-Normal">
-					Dedicated and enthusiastic person who has recently completed a four-year study program in
-					<b class="color-Header"> Computer Engineering</b>,
-					specialising in
-					<b class="color-Header"> Artificial Intelligence</b>,
-					at UCSI University.
-				</p>
+					<p class="color-Normal">
+						Dedicated and enthusiastic person who has recently completed a four-year study program in
+						<b class="color-Header"> Computer Engineering</b>,
+						specialising in
+						<b class="color-Header"> Artificial Intelligence</b>,
+						at UCSI University.
+					</p>
+				</div>
 
-				<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
-					project
-				</h6>
+				<div class="pb-5">
+					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+						project
+					</h6>
 
-				<p class="color-Normal">
-					Dedicated and enthusiastic person who has recently completed a four-year study program in
-					<b class="color-Header"> Computer Engineering</b>,
-					specialising in
-					<b class="color-Header"> Artificial Intelligence</b>,
-					at UCSI University.
-				</p>
+					<p class="color-Normal">
+						Dedicated and enthusiastic person who has recently completed a four-year study program in
+						<b class="color-Header"> Computer Engineering</b>,
+						specialising in
+						<b class="color-Header"> Artificial Intelligence</b>,
+						at UCSI University.
+					</p>
+				</div>
 
-				<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
-					hobby
-				</h6>
+				<div class="pb-5">
+					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+						hobby
+					</h6>
 
-				<p class="color-Normal">
-					Dedicated and enthusiastic person who has recently completed a four-year study program in
-					<b class="color-Header"> Computer Engineering</b>,
-					specialising in
-					<b class="color-Header"> Artificial Intelligence</b>,
-					at UCSI University.
-				</p>
+					<p class="color-Normal">
+						Dedicated and enthusiastic person who has recently completed a four-year study program in
+						<b class="color-Header"> Computer Engineering</b>,
+						specialising in
+						<b class="color-Header"> Artificial Intelligence</b>,
+						at UCSI University.
+					</p>
+				</div>
 
-				<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal d-lg-none">
-					reference
-				</h6>
+				<div class="pb-5">
+					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+						reference
+					</h6>
 
-				<p class="color-Normal">
-					Dedicated and enthusiastic person who has recently completed a four-year study program in
-					<b class="color-Header"> Computer Engineering</b>,
-					specialising in
-					<b class="color-Header"> Artificial Intelligence</b>,
-					at UCSI University.
-				</p>
+					<p class="color-Normal">
+						Dedicated and enthusiastic person who has recently completed a four-year study program in
+						<b class="color-Header"> Computer Engineering</b>,
+						specialising in
+						<b class="color-Header"> Artificial Intelligence</b>,
+						at UCSI University.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -205,7 +216,11 @@
 </template>
 
 <script>
-import JobDetail from '@/assets/Detail/JobDetail.json'
+import JobDetail from '@/assets/Detail/JobDetail.json';
+import EducationDetail from '@/assets/Detail/EducationDetail.json';
+import HobbyDetail from '@/assets/Detail/HobbyDetail.json';
+import SkillDetail from '@/assets/Detail/SkillDetail.json';
+import ReferenceDetail from '@/assets/Detail/ReferenceDetail.json';
 
 export default {
 	data() {
@@ -214,8 +229,18 @@ export default {
 			y: 0,
 			isZH: false,
 			activeItem: '',
-			JobDetail: JobDetail
+			JobDetail: JobDetail,
+			EducationDetail: EducationDetail,
+			HobbyDetail: HobbyDetail,
+			SkillDetail: SkillDetail,
+			ReferenceDetail: ReferenceDetail
 		};
+	},
+	created() {
+		// Reverse the arrays immediately after they are loaded
+		this.JobDetail = [...this.JobDetail].reverse();
+		this.EducationDetail = [...this.EducationDetail].reverse();
+		this.ReferenceDetail = [...this.ReferenceDetail].reverse();
 	},
 	methods: {
 		update(event) {
@@ -245,7 +270,6 @@ export default {
 	},
 	mounted() {
 		window.addEventListener('mousemove', this.update);
-		console.log(this.JobDetail)
 	},
 	beforeDestroy() {
 		window.removeEventListener('mousemove', this.update);

@@ -2,13 +2,17 @@
 
 body {
 	background-color: rgb(15 23 42) !important;
-	/* background: radial-gradient(600px at 561px 282px, rgba(29, 78, 216, 0.15), transparent 80%); */
 	overflow-x: hidden;
 }
 
 /* Background CSS */
 .bg-Normal {
 	background-color: rgba(15, 23, 42);
+}
+
+.bg-Normal-75-blur {
+	background-color: rgba(15, 23, 42, .75);
+	backdrop-filter: blur(8px);
 }
 
 /* Color CSS */
@@ -43,11 +47,6 @@ body {
 
 /* CSS after 992px */
 @media (min-width: 992px) {
-
-	/* Body */
-	body {
-		background: unset;
-	}
 
 	/* Height */
 	.h-lg-100 {
