@@ -21,47 +21,15 @@
 							{{ $t('short-description') }}
 						</p>
 
-						<div class="d-lg-flex flex-column gap-3 mt-5" style="display: none;">
-							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
-								:style="getItemStyle('about')" @click="setActiveItem('about')">
+						<div id="scrollspy" class="d-lg-flex flex-column gap-3 mt-5" data-bs-spy="scroll"
+							data-bs-target="#scrollspy" data-bs-offset="100" tabindex="0" style="display: none;">
+							<div v-for="item in ['about', 'education', 'experience', 'skill', 'project', 'hobby', 'reference']"
+								:key="item"
+								:class="['text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center', { active: activeItem === item }]"
+								:style="getItemStyle(item)" @click="scrollToSection(item)">
 								<!-- Tail element before the text -->
-								<span :style="getTailStyle('about')" class="item-tail"></span>
-								{{ getItemText('about') }}
-							</div>
-
-							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
-								:style="getItemStyle('education')" @click="setActiveItem('education')">
-								<!-- Tail element before the text -->
-								<span :style="getTailStyle('education')" class="item-tail"></span>
-								{{ getItemText('education') }}
-							</div>
-
-							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
-								:style="getItemStyle('skill')" @click="setActiveItem('skill')">
-								<!-- Tail element before the text -->
-								<span :style="getTailStyle('skill')" class="item-tail"></span>
-								{{ getItemText('skill') }}
-							</div>
-
-							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
-								:style="getItemStyle('project')" @click="setActiveItem('project')">
-								<!-- Tail element before the text -->
-								<span :style="getTailStyle('project')" class="item-tail"></span>
-								{{ getItemText('project') }}
-							</div>
-
-							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
-								:style="getItemStyle('hobby')" @click="setActiveItem('hobby')">
-								<!-- Tail element before the text -->
-								<span :style="getTailStyle('hobby')" class="item-tail"></span>
-								{{ getItemText('hobby') }}
-							</div>
-
-							<div class="text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center"
-								:style="getItemStyle('reference')" @click="setActiveItem('reference')">
-								<!-- Tail element before the text -->
-								<span :style="getTailStyle('reference')" class="item-tail"></span>
-								{{ getItemText('reference') }}
+								<span :style="getTailStyle(item)" class="item-tail"></span>
+								{{ getItemText(item) }}
 							</div>
 						</div>
 					</div>
@@ -73,8 +41,8 @@
 									<input class="form-check-input pointer" type="checkbox" role="switch"
 										id="flexSwitchCheckChecked" v-model="isZH" @change="toggleLocale">
 									<label class="form-check-label color-Header fw-bold pointer user-select-none"
-										for="flexSwitchCheckChecked">{{
-											isZH ? '中文' : 'EN' }}</label>
+										for="flexSwitchCheckChecked">
+										{{ isZH ? '中文' : 'EN' }}</label>
 								</div>
 							</div>
 
@@ -111,19 +79,22 @@
 				</div>
 			</div>
 
-			<div class="w-lg-48 py-10 ms-auto">
+			<div class="w-lg-50 py-10 ms-auto">
 				<div class="pb-5">
 					<h6 class=" text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						about
 					</h6>
 
-					<p class="color-Normal">
-						Dedicated and enthusiastic person who has recently completed a four-year study program in
-						<b class="color-Header"> Computer Engineering</b>,
-						specialising in
-						<b class="color-Header"> Artificial Intelligence</b>,
-						at UCSI University.
-					</p>
+					<div id="about">
+						<p class="color-Normal">
+							Dedicated and enthusiastic person who has recently completed a four-year study program in
+							<b class="color-Header"> Computer Engineering</b>,
+							specialising in
+							<b class="color-Header"> Artificial Intelligence</b>,
+							at UCSI University.
+						</p>
+					</div>
+
 				</div>
 
 				<div class="pb-5">
@@ -131,13 +102,29 @@
 						education
 					</h6>
 
-					<p class="color-Normal">
-						Dedicated and enthusiastic person who has recently completed a four-year study program in
-						<b class="color-Header"> Computer Engineering</b>,
-						specialising in
-						<b class="color-Header"> Artificial Intelligence</b>,
-						at UCSI University.
-					</p>
+					<div id="education">
+						<div class="Detail_Container rounded-3 p-lg-3 mb-3 mb-lg-2 pointer"
+							v-for="(Education, Index) in EducationDetail" :key="Index">
+							<a class="d-flex flex-column flex-lg-row text-decoration-none" :href="Education.Link"
+								target="_blank">
+								<div class="color-Normal fs-12px my-1 w-lg-25">
+									{{ Education.StartDate }} ~ {{ Education.EndDate }}
+								</div>
+								<div class="ms-lg-3 w-lg-75">
+									<div class="DetailTitle fs-6 color-Header">
+										{{ Education.CourseName }}
+									</div>
+									<div class="color-Normal mb-2">
+										{{ Education.SchoolName }}
+									</div>
+									<div class="color-Normal">
+										{{ isZH ? Education.Description.zh : Education.Description.en }}
+									</div>
+								</div>
+							</a>
+
+						</div>
+					</div>
 				</div>
 
 				<div class="pb-5">
@@ -145,13 +132,33 @@
 						experience
 					</h6>
 
-					<p class="color-Normal">
-						Dedicated and enthusiastic person who has recently completed a four-year study program in
-						<b class="color-Header"> Computer Engineering</b>,
-						specialising in
-						<b class="color-Header"> Artificial Intelligence</b>,
-						at UCSI University.
-					</p>
+					<div id="experience">
+						<div class="Detail_Container rounded-3 p-lg-3 mb-3 mb-lg-2 pointer"
+							v-for="(Job, Index) in JobDetail" :key="Index">
+							<div class="d-flex flex-column flex-lg-row">
+								<div class="color-Normal fs-12px my-1 w-lg-25">
+									{{ Job.StartDate }} ~ {{ Job.EndDate }}
+								</div>
+								<div class="ms-lg-3 w-lg-75">
+									<div class="DetailTitle fs-6 color-Header">
+										{{ Job.JobTitle }}
+									</div>
+									<div class="color-Normal mb-2">
+										{{ Job.Company }}
+									</div>
+									<div class="color-Normal mb-3">
+										{{ isZH ? Job.JobDescription.zh : Job.JobDescription.en }}
+									</div>
+									<div class="d-flex flex-wrap gap-2">
+										<div v-for="(skill, skillIndex) in Job.SkillTool" :key="skillIndex"
+											class="badge rounded-pill bg-badge color-lightgreen px-3 py-2">
+											{{ skill }}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="pb-5">
@@ -159,13 +166,15 @@
 						skill
 					</h6>
 
-					<p class="color-Normal">
-						Dedicated and enthusiastic person who has recently completed a four-year study program in
-						<b class="color-Header"> Computer Engineering</b>,
-						specialising in
-						<b class="color-Header"> Artificial Intelligence</b>,
-						at UCSI University.
-					</p>
+					<div id="skill">
+						<p class="color-Normal">
+							Dedicated and enthusiastic person who has recently completed a four-year study program in
+							<b class="color-Header"> Computer Engineering</b>,
+							specialising in
+							<b class="color-Header"> Artificial Intelligence</b>,
+							at UCSI University.
+						</p>
+					</div>
 				</div>
 
 				<div class="pb-5">
@@ -173,13 +182,15 @@
 						project
 					</h6>
 
-					<p class="color-Normal">
-						Dedicated and enthusiastic person who has recently completed a four-year study program in
-						<b class="color-Header"> Computer Engineering</b>,
-						specialising in
-						<b class="color-Header"> Artificial Intelligence</b>,
-						at UCSI University.
-					</p>
+					<div id="project">
+						<p class="color-Normal">
+							Dedicated and enthusiastic person who has recently completed a four-year study program in
+							<b class="color-Header"> Computer Engineering</b>,
+							specialising in
+							<b class="color-Header"> Artificial Intelligence</b>,
+							at UCSI University.
+						</p>
+					</div>
 				</div>
 
 				<div class="pb-5">
@@ -187,13 +198,15 @@
 						hobby
 					</h6>
 
-					<p class="color-Normal">
-						Dedicated and enthusiastic person who has recently completed a four-year study program in
-						<b class="color-Header"> Computer Engineering</b>,
-						specialising in
-						<b class="color-Header"> Artificial Intelligence</b>,
-						at UCSI University.
-					</p>
+					<div id="hobby">
+						<p class="color-Normal">
+							Dedicated and enthusiastic person who has recently completed a four-year study program in
+							<b class="color-Header"> Computer Engineering</b>,
+							specialising in
+							<b class="color-Header"> Artificial Intelligence</b>,
+							at UCSI University.
+						</p>
+					</div>
 				</div>
 
 				<div class="pb-5">
@@ -201,13 +214,15 @@
 						reference
 					</h6>
 
-					<p class="color-Normal">
-						Dedicated and enthusiastic person who has recently completed a four-year study program in
-						<b class="color-Header"> Computer Engineering</b>,
-						specialising in
-						<b class="color-Header"> Artificial Intelligence</b>,
-						at UCSI University.
-					</p>
+					<div id="reference">
+						<p class="color-Normal">
+							Dedicated and enthusiastic person who has recently completed a four-year study program in
+							<b class="color-Header"> Computer Engineering</b>,
+							specialising in
+							<b class="color-Header"> Artificial Intelligence</b>,
+							at UCSI University.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -250,8 +265,37 @@ export default {
 		toggleLocale() {
 			this.$i18n.locale = this.isZH ? 'zh' : 'en';
 		},
-		setActiveItem(item) {
-			this.activeItem = item;
+		scrollToSection(item) {
+			const section = document.getElementById(item);
+			if (section) {
+				const elementPosition = section.getBoundingClientRect().top; // Get the element's position relative to the viewport
+				const offsetPosition = elementPosition + window.scrollY - 96;
+
+				window.scrollTo({
+					top: offsetPosition,
+					behavior: 'smooth',
+				});
+			}
+		},
+		handleScrollSpy(event) {
+			const sections = ['about', 'education', 'experience', 'skill', 'project', 'hobby', 'reference'];
+			const scrollTop = window.scrollY + 100; // Adjust offset
+			let active = '';
+
+			sections.forEach((id) => {
+				const section = document.getElementById(id);
+				if (section) {
+					const { top, bottom } = section.getBoundingClientRect();
+					const sectionTop = window.scrollY + top;
+					const sectionBottom = window.scrollY + bottom;
+
+					if (scrollTop >= sectionTop && scrollTop <= sectionBottom) {
+						active = id;
+					}
+				}
+			});
+
+			this.activeItem = active;
 		},
 		getItemStyle(item) {
 			return {
@@ -270,9 +314,11 @@ export default {
 	},
 	mounted() {
 		window.addEventListener('mousemove', this.update);
+		window.addEventListener('scroll', this.handleScrollSpy);
 	},
 	beforeDestroy() {
 		window.removeEventListener('mousemove', this.update);
+		window.removeEventListener('scroll', this.handleScrollSpy);
 	},
 };
 </script>
@@ -311,7 +357,7 @@ export default {
 	margin-right: 10px;
 	width: 30px;
 	background-color: rgb(148, 163, 184);
-	transition: width 0.3s ease, background-color 0.3s ease;
+	transition: width 0.2s ease, background-color 0.3s ease;
 }
 
 .contentTitle:hover .item-tail {
@@ -319,5 +365,24 @@ export default {
 	background-color: rgb(226, 232, 240) !important;
 }
 
+.DetailTitle {
+	transition: all 0.1s;
+}
+
+.Detail_Container:hover .DetailTitle {
+	color: rgb(94 234 212) !important;
+}
+
 /* CSS after 992 px */
+@media (min-width: 992px) {
+	.Detail_Container {
+		transition: all 0.1s;
+	}
+
+	.Detail_Container:hover {
+		background-color: rgba(30, 41, 59, .5);
+		box-shadow: 0 0 #0000, 0 0 #0000, inset 0 1px 0 0 rgba(148, 163, 184, .1);
+
+	}
+}
 </style>

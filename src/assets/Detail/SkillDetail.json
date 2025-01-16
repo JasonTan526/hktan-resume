@@ -18,7 +18,8 @@
 			"ReactAdmin",
 			"MySQL",
 			"jQuery",
-			"ExpressJs"
+			"ExpressJs",
+			"Bootstrap"
 		],
 		"Tool": [
 			"PhpMAdmin",

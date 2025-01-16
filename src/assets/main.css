@@ -15,6 +15,10 @@ body {
 	backdrop-filter: blur(8px);
 }
 
+.bg-badge {
+	background-color: rgba(45, 212, 191, .1);
+}
+
 /* Color CSS */
 .color-Header {
 	color: rgb(226 232 240);
@@ -24,9 +28,22 @@ body {
 	color: rgb(148 163 184);
 }
 
+.color-lightgreen {
+	color: rgb(94 234 212) !important;
+}
+
 /* Cursor CSS */
 .pointer {
 	cursor: pointer;
+}
+
+/* Font Size CSS */
+.fs-10px {
+	font-size: 10px;
+}
+
+.fs-12px {
+	font-size: 12px;
 }
 
 /* Margin CSS */
@@ -76,7 +93,25 @@ body {
 	}
 
 	/* Width */
+	.w-lg-25 {
+		width: 25% !important;
+	}
+
 	.w-lg-48 {
 		width: 48% !important;
 	}
+
+	.w-lg-50 {
+		width: 50% !important;
+	}
+
+	.w-lg-75 {
+		width: 75% !important;
+	}
+
+	.w-lg-100 {
+		width: 100% !important;
+	}
+
+
 }

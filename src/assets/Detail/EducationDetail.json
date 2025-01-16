@@ -1,23 +1,25 @@
 [
 	{
-		"CourseName": "Science Stream",
+		"CourseName": "Secondary School (Science Stream)",
 		"SchoolName": "Sekolah Menengah Sri Omega",
 		"Description": {
 			"en": "English",
 			"zh": "中文"
 		},
 		"StartDate": "Jan 2013",
-		"EndDate": "Dec 2017"
+		"EndDate": "Dec 2017",
+		"Link": "https://www.seriomega.edu.my/index.php"
 	},
 	{
-		"CourseName": "Science Stream A-level",
+		"CourseName": "A-level (Science Stream)",
 		"SchoolName": "Crescendo International Collage",
 		"Description": {
 			"en": "English",
 			"zh": "中文"
 		},
 		"StartDate": "Jan 2018",
-		"EndDate": "June 2019"
+		"EndDate": "June 2019",
+		"Link": "https://www.crescendo.edu.my/pages/show/72"
 	},
 	{
 		"CourseName": "Bachelor in Computer Engineer (Major in artificial Intelligence)",
@@ -27,6 +29,7 @@
 			"zh": "中文"
 		},
 		"StartDate": "Jan 2020",
-		"EndDate": "Nov 2023"
+		"EndDate": "Nov 2023",
+		"Link": "https://www.ucsiuniversity.edu.my/programmes/bachelor-computer-engineering-artificial-intelligence-honours"
 	}
 ]
