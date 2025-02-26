@@ -6,7 +6,7 @@
 
 	<div class="w-full py-5 px-3 px-md-5 py-lg-0">
 		<div class="w-full d-flex flex-column max-w-xl min-vh-100 mx-auto main_container position-relative flex-lg-row">
-			<div class="w-lg-48 py-lg-10 vh-lg-100 sticky-lg-top">
+			<div class="w-lg-48 py-lg-5-i py-xl-10 vh-lg-100 sticky-lg-top">
 				<div class="h-lg-100 d-flex flex-column justify-content-between">
 					<div>
 						<h1 class="fw-bold color-Header mb-0">
@@ -21,7 +21,7 @@
 							{{ $t('short-description') }}
 						</p>
 
-						<div id="scrollspy" class="d-lg-flex flex-column gap-3 mt-5" data-bs-spy="scroll"
+						<div id="scrollspy" class="d-lg-flex flex-column gap-3 mt-lg-3 mt-xl-5" data-bs-spy="scroll"
 							data-bs-target="#scrollspy" data-bs-offset="100" tabindex="0" style="display: none;">
 							<div v-for="item in ['about', 'education', 'experience', 'skill', 'project', 'hobby', 'reference']"
 								:key="item"
@@ -39,10 +39,11 @@
 							<div>
 								<div class="form-check form-switch">
 									<input class="form-check-input pointer" type="checkbox" role="switch"
-										id="flexSwitchCheckChecked" v-model="isZH" @change="toggleLocale">
+										id="flexSwitchCheckChecked" :checked="isChinese" @change="toggleLanguage" />
 									<label class="form-check-label color-Header fw-bold pointer user-select-none"
 										for="flexSwitchCheckChecked">
-										{{ isZH ? '中文' : 'EN' }}</label>
+										{{ isChinese ? '中文' : 'EN' }}
+									</label>
 								</div>
 							</div>
 
@@ -79,20 +80,14 @@
 				</div>
 			</div>
 
-			<div class="w-lg-50 py-10 ms-auto">
+			<div class="w-lg-50 py-lg-5-i py-xl-10 ms-auto">
 				<div class="pb-5">
 					<h6 class=" text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						about
 					</h6>
 
 					<div id="about">
-						<p class="color-Normal">
-							Dedicated and enthusiastic person who has recently completed a four-year study program in
-							<b class="color-Header"> Computer Engineering</b>,
-							specialising in
-							<b class="color-Header"> Artificial Intelligence</b>,
-							at UCSI University.
-						</p>
+						<about />
 					</div>
 
 				</div>
@@ -103,27 +98,7 @@
 					</h6>
 
 					<div id="education">
-						<div class="Detail_Container rounded-3 p-lg-3 mb-3 mb-lg-2 pointer"
-							v-for="(Education, Index) in EducationDetail" :key="Index">
-							<a class="d-flex flex-column flex-lg-row text-decoration-none" :href="Education.Link"
-								target="_blank">
-								<div class="color-Normal fs-12px my-1 w-lg-25">
-									{{ Education.StartDate }} ~ {{ Education.EndDate }}
-								</div>
-								<div class="ms-lg-3 w-lg-75">
-									<div class="DetailTitle fs-6 color-Header">
-										{{ Education.CourseName }}
-									</div>
-									<div class="color-Normal mb-2">
-										{{ Education.SchoolName }}
-									</div>
-									<div class="color-Normal">
-										{{ isZH ? Education.Description.zh : Education.Description.en }}
-									</div>
-								</div>
-							</a>
-
-						</div>
+						<education />
 					</div>
 				</div>
 
@@ -151,7 +126,7 @@
 									</div>
 									<div class="d-flex flex-wrap gap-2">
 										<div v-for="(skill, skillIndex) in Job.SkillTool" :key="skillIndex"
-											class="badge rounded-pill bg-badge color-lightgreen px-3 py-2">
+											class="badge rounded-pill bg-badge color-lightgreen px-3 py-2 skill-pill">
 											{{ skill }}
 										</div>
 									</div>
@@ -232,12 +207,19 @@
 
 <script>
 import JobDetail from '@/assets/Detail/JobDetail.json';
-import EducationDetail from '@/assets/Detail/EducationDetail.json';
 import HobbyDetail from '@/assets/Detail/HobbyDetail.json';
 import SkillDetail from '@/assets/Detail/SkillDetail.json';
 import ReferenceDetail from '@/assets/Detail/ReferenceDetail.json';
+import { mapGetters, mapActions } from 'vuex';
+import about from '@/components/about.vue';
+import education from '@/components/education.vue';
+
 
 export default {
+	components: {
+		about,
+		education
+	},
 	data() {
 		return {
 			x: 0,
@@ -245,7 +227,6 @@ export default {
 			isZH: false,
 			activeItem: '',
 			JobDetail: JobDetail,
-			EducationDetail: EducationDetail,
 			HobbyDetail: HobbyDetail,
 			SkillDetail: SkillDetail,
 			ReferenceDetail: ReferenceDetail
@@ -254,16 +235,12 @@ export default {
 	created() {
 		// Reverse the arrays immediately after they are loaded
 		this.JobDetail = [...this.JobDetail].reverse();
-		this.EducationDetail = [...this.EducationDetail].reverse();
 		this.ReferenceDetail = [...this.ReferenceDetail].reverse();
 	},
 	methods: {
 		update(event) {
 			this.x = event.pageX;
 			this.y = event.pageY;
-		},
-		toggleLocale() {
-			this.$i18n.locale = this.isZH ? 'zh' : 'en';
 		},
 		scrollToSection(item) {
 			const section = document.getElementById(item);
@@ -310,11 +287,20 @@ export default {
 		},
 		getItemText(item) {
 			return this.$t(item);
-		}
+		},
+		...mapActions(['toggleLanguage'])
+	},
+	computed: {
+		...mapGetters(['isChinese']) // Getter from Vuex
 	},
 	mounted() {
 		window.addEventListener('mousemove', this.update);
 		window.addEventListener('scroll', this.handleScrollSpy);
+	},
+	watch: {
+		isChinese(newValue) {
+			this.$i18n.locale = newValue ? 'zh' : 'en'; // Update locale when language changes
+		}
 	},
 	beforeDestroy() {
 		window.removeEventListener('mousemove', this.update);
@@ -373,10 +359,15 @@ export default {
 	color: rgb(94 234 212) !important;
 }
 
+.skill-pill:hover {
+	transform: scale(1.1);
+	transition: all 0.3s;
+}
+
 /* CSS after 992 px */
 @media (min-width: 992px) {
 	.Detail_Container {
-		transition: all 0.1s;
+		transition: all 0.3s;
 	}
 
 	.Detail_Container:hover {

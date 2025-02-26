@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import VueLazyload from 'vue-lazyload';
 import i18n from './i18n';
+import store from './store';
 
 // Main CSS
 import './assets/main.css'
@@ -16,6 +17,7 @@ const app = createApp(App);
 
 // Use App
 app.use(i18n);
+app.use(store)
 
 // Vue Lazy Load
 app.use(VueLazyload, {

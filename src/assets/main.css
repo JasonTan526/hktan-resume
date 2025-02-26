@@ -80,9 +80,9 @@ body {
 	}
 
 	/* Padding */
-	.py-lg-10 {
-		padding-top: 6rem;
-		padding-bottom: 6rem;
+	.py-lg-5-i {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
 	}
 
 	/* Sticky */
@@ -112,6 +112,14 @@ body {
 	.w-lg-100 {
 		width: 100% !important;
 	}
+}
 
+/* CSS after 1200px */
+@media (min-width: 1200px) {
 
+	/* Padding */
+	.py-xl-10 {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
 }
