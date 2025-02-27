@@ -12,10 +12,10 @@
 						<h1 class="fw-bold color-Header mb-0">
 							Jason Tan Heng Kern
 						</h1>
-						<h6 class="color-Normal mt-3 mb-0">
+						<h5 class="color-Normal mt-3 mb-0">
 							{{ $t('Icanbe') }} <b class="color-Header">{{ $t('Job1') }}</b> {{ $t('or') }} <b
 								class="color-Header">{{ $t('Job2') }}</b>
-						</h6>
+						</h5>
 
 						<p class="color-Normal mt-4 mb-0" style="max-width: 30rem; min-height: 80px;">
 							{{ $t('short-description') }}
@@ -82,9 +82,9 @@
 
 			<div class="w-lg-50 py-lg-5-i py-xl-10 ms-auto">
 				<div class="pb-5">
-					<h6 class=" text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+					<h5 class=" text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						about
-					</h6>
+					</h5>
 
 					<div id="about">
 						<about />
@@ -93,9 +93,9 @@
 				</div>
 
 				<div class="pb-5">
-					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						education
-					</h6>
+					</h5>
 
 					<div id="education">
 						<education />
@@ -103,9 +103,9 @@
 				</div>
 
 				<div class="pb-5">
-					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						experience
-					</h6>
+					</h5>
 
 					<div id="experience">
 						<experience />
@@ -113,25 +113,19 @@
 				</div>
 
 				<div class="pb-5">
-					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						skill
-					</h6>
+					</h5>
 
 					<div id="skill">
-						<p class="color-Normal">
-							Dedicated and enthusiastic person who has recently completed a four-year study program in
-							<b class="color-Header"> Computer Engineering</b>,
-							specialising in
-							<b class="color-Header"> Artificial Intelligence</b>,
-							at UCSI University.
-						</p>
+						<skill />
 					</div>
 				</div>
 
 				<div class="pb-5">
-					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						project
-					</h6>
+					</h5>
 
 					<div id="project">
 						<p class="color-Normal">
@@ -145,9 +139,9 @@
 				</div>
 
 				<div class="pb-5">
-					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						hobby
-					</h6>
+					</h5>
 
 					<div id="hobby">
 						<p class="color-Normal">
@@ -161,9 +155,9 @@
 				</div>
 
 				<div class="pb-5">
-					<h6 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						reference
-					</h6>
+					</h5>
 
 					<div id="reference">
 						<p class="color-Normal">
@@ -189,12 +183,14 @@ import { mapGetters, mapActions } from 'vuex';
 import about from '@/components/about.vue';
 import education from '@/components/education.vue';
 import experience from '@/components/experience.vue';
+import skill from '@/components/skill.vue';
 
 export default {
 	components: {
 		about,
 		education,
-		experience
+		experience,
+		skill
 	},
 	data() {
 		return {

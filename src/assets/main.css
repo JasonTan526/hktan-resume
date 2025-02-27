@@ -3,6 +3,7 @@
 body {
 	background-color: rgb(15 23 42) !important;
 	overflow-x: hidden;
+	font-family: 'montserrat', sans-serif !important;
 }
 
 /* Background CSS */
@@ -46,6 +47,18 @@ body {
 	font-size: 12px;
 }
 
+.fs-16px {
+	font-size: 16px;
+}
+
+.fs-18px {
+	font-size: 18px;
+}
+
+.fs-20px {
+	font-size: 20px;
+}
+
 /* Margin CSS */
 .mt-10 {
 	margin-top: 6rem;
@@ -60,6 +73,15 @@ body {
 .py-10 {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
+}
+
+/* CSS after 768px */
+@media (min-width: 768px) {
+
+	/* Font Size */
+	.fs-md-20px {
+		font-size: 20px;
+	}
 }
 
 /* CSS after 992px */
