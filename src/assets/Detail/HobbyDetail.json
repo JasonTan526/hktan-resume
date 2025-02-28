@@ -1,32 +1,44 @@
-{
-	"hobbies": [
-		{
-			"en": "Coding",
-			"zh": "编程"
-		},
-		{
-			"en": "Badminton",
-			"zh": "羽毛球"
-		},
-		{
-			"en": "Swimming",
-			"zh": "游泳"
-		},
-		{
-			"en": "Reading",
-			"zh": "阅读"
-		},
-		{
-			"en": "Piano",
-			"zh": "钢琴"
-		},
-		{
-			"en": "Guitar",
-			"zh": "吉他"
-		},
-		{
-			"en": "Travelling",
-			"zh": "旅行"
-		}
-	]
-}
+[
+	{
+		"en": "Coding",
+		"zh": "编程",
+		"img": "/Image/Coding.webp",
+		"alt": "Coding"
+	},
+	{
+		"en": "Badminton",
+		"zh": "羽毛球",
+		"img": "/Image/Badminton.webp",
+		"alt": "Badminton"
+	},
+	{
+		"en": "Swimming",
+		"zh": "游泳",
+		"img": "/Image/Swimming.webp",
+		"alt": "Swimming"
+	},
+	{
+		"en": "Reading",
+		"zh": "阅读",
+		"img": "/Image/Reading.webp",
+		"alt": "Reading"
+	},
+	{
+		"en": "Piano",
+		"zh": "钢琴",
+		"img": "/Image/Piano.webp",
+		"alt": "Piano"
+	},
+	{
+		"en": "Guitar",
+		"zh": "吉他",
+		"img": "/Image/Guitar.webp",
+		"alt": "Guitar"
+	},
+	{
+		"en": "Travel",
+		"zh": "旅行",
+		"img": "/Image/Travelling.webp",
+		"alt": "Travel"
+	}
+]

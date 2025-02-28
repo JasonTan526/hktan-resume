@@ -21,9 +21,10 @@
 							{{ $t('short-description') }}
 						</p>
 
-						<div id="scrollspy" class="d-lg-flex flex-column gap-3 mt-lg-3 mt-xl-5" data-bs-spy="scroll"
+						<div id="scrollspy" class="d-lg-flex flex-column gap-3 " data-bs-spy="scroll"
 							data-bs-target="#scrollspy" data-bs-offset="100" tabindex="0" style="display: none;">
-							<div v-for="item in ['about', 'education', 'experience', 'skill', 'project', 'hobby', 'reference']"
+							<!-- <div v-for="item in ['about', 'education', 'experience', 'skill', 'project', 'hobby', 'reference']" -->
+							<div v-for="item in ['about', 'education', 'experience', 'skill', 'hobby', 'reference']"
 								:key="item"
 								:class="['text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center', { active: activeItem === item }]"
 								:style="getItemStyle(item)" @click="scrollToSection(item)">
@@ -122,7 +123,7 @@
 					</div>
 				</div>
 
-				<div class="pb-5">
+				<!-- <div class="pb-5">
 					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						project
 					</h5>
@@ -136,7 +137,7 @@
 							at UCSI University.
 						</p>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="pb-5">
 					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
@@ -144,13 +145,7 @@
 					</h5>
 
 					<div id="hobby">
-						<p class="color-Normal">
-							Dedicated and enthusiastic person who has recently completed a four-year study program in
-							<b class="color-Header"> Computer Engineering</b>,
-							specialising in
-							<b class="color-Header"> Artificial Intelligence</b>,
-							at UCSI University.
-						</p>
+						<hobby />
 					</div>
 				</div>
 
@@ -184,13 +179,15 @@ import about from '@/components/about.vue';
 import education from '@/components/education.vue';
 import experience from '@/components/experience.vue';
 import skill from '@/components/skill.vue';
+import hobby from '@/components/hobby.vue';
 
 export default {
 	components: {
 		about,
 		education,
 		experience,
-		skill
+		skill,
+		hobby
 	},
 	data() {
 		return {
