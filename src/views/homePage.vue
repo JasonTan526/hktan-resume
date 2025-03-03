@@ -17,25 +17,23 @@
 								class="color-Header">{{ $t('Job2') }}</b>
 						</h5>
 
-						<p class="color-Normal mt-4 mb-0" style="max-width: 30rem; min-height: 80px;">
-							{{ $t('short-description') }}
-						</p>
 
-						<div id="scrollspy" class="d-lg-flex flex-column gap-3 " data-bs-spy="scroll"
-							data-bs-target="#scrollspy" data-bs-offset="100" tabindex="0" style="display: none;">
-							<!-- <div v-for="item in ['about', 'education', 'experience', 'skill', 'project', 'hobby', 'reference']" -->
-							<div v-for="item in ['about', 'education', 'experience', 'skill', 'hobby', 'reference']"
-								:key="item"
-								:class="['text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center', { active: activeItem === item }]"
-								:style="getItemStyle(item)" @click="scrollToSection(item)">
-								<!-- Tail element before the text -->
-								<span :style="getTailStyle(item)" class="item-tail"></span>
-								{{ getItemText(item) }}
-							</div>
+					</div>
+
+					<div id="scrollspy" class="d-lg-flex flex-column gap-3 " data-bs-spy="scroll"
+						data-bs-target="#scrollspy" data-bs-offset="100" tabindex="0" style="display: none;">
+						<!-- <div v-for="item in ['about', 'education', 'experience', 'skill', 'project', 'hobby', 'reference']" -->
+						<div v-for="item in ['about', 'education', 'experience', 'skill', 'hobby', 'reference', 'contact']"
+							:key="item"
+							:class="['text-uppercase fw-bold pointer contentTitle user-select-none transition-all d-flex align-items-center', { active: activeItem === item }]"
+							:style="getItemStyle(item)" @click="scrollToSection(item)">
+							<!-- Tail element before the text -->
+							<span :style="getTailStyle(item)" class="item-tail"></span>
+							{{ getItemText(item) }}
 						</div>
 					</div>
 
-					<div>
+					<div class="mt-3 mt-lg-0">
 						<div class="d-flex flex-column">
 							<div>
 								<div class="form-check form-switch">
@@ -149,19 +147,102 @@
 					</div>
 				</div>
 
-				<div class="pb-5">
+				<div class="pb-5 ">
 					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						reference
 					</h5>
 
 					<div id="reference">
-						<p class="color-Normal">
-							Dedicated and enthusiastic person who has recently completed a four-year study program in
-							<b class="color-Header"> Computer Engineering</b>,
-							specialising in
-							<b class="color-Header"> Artificial Intelligence</b>,
-							at UCSI University.
-						</p>
+						<reference />
+					</div>
+				</div>
+
+				<div class="pb-5 mb-lg-35">
+					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
+						contact
+					</h5>
+
+					<div id="contact">
+
+						<div class="color-Header text-uppercase fw-bold fs-18px">
+							phone
+						</div>
+
+						<div class="d-flex color-Normal mt-2 fs-16px">
+							<div>
+								MY:
+							</div>
+
+							<div class="ms-1">
+								+60-18 772 8526
+							</div>
+						</div>
+
+						<div class="d-flex color-Normal mt-2 fs-16px">
+							<div>
+								SG:
+							</div>
+
+							<div class="ms-1">
+								+65-8425 2922
+							</div>
+						</div>
+
+						<div class="color-Header text-uppercase fw-bold fs-18px mt-3">
+							email
+						</div>
+
+						<div class="d-flex color-Normal mt-2 fs-16px">
+							<div>
+								Personal:
+							</div>
+
+							<div class="ms-1">
+								hktan0526@gmail.com
+							</div>
+						</div>
+
+						<div class="d-flex color-Normal mt-2 fs-16px">
+							<div>
+								Work:
+							</div>
+
+							<div class="ms-1">
+								jasontanhengkern@gmail.com
+							</div>
+						</div>
+
+						<div class="color-Header text-uppercase fw-bold fs-18px mt-3">
+							address
+						</div>
+
+						<div class="d-flex color-Normal mt-2 fs-16px">
+
+							<div>
+								MY:
+							</div>
+
+							<div class="ms-1">
+								187, Jalan Impian Emas 59,
+								<br>
+								Taman Impian Emas,
+								<br>
+								81300 Skudai, Johor
+							</div>
+						</div>
+
+						<div class="d-flex color-Normal mt-1 fs-16px">
+							<div>
+								SG:
+							</div>
+
+							<div class="ms-1">
+								Blk 419 Fajar Road
+								<br>
+								#10-457 Singapore 670419
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -180,6 +261,7 @@ import education from '@/components/education.vue';
 import experience from '@/components/experience.vue';
 import skill from '@/components/skill.vue';
 import hobby from '@/components/hobby.vue';
+import reference from '@/components/reference.vue';
 
 export default {
 	components: {
@@ -187,7 +269,8 @@ export default {
 		education,
 		experience,
 		skill,
-		hobby
+		hobby,
+		reference
 	},
 	data() {
 		return {
@@ -220,7 +303,8 @@ export default {
 		},
 		handleScrollSpy() {
 			const scrollTop = window.scrollY + 100;
-			this.activeItem = ['about', 'education', 'experience', 'skill', 'project', 'hobby', 'reference']
+			// this.activeItem = ['about', 'education', 'experience', 'skill', 'project', 'hobby', 'reference']
+			this.activeItem = ['about', 'education', 'experience', 'skill', 'hobby', 'reference', 'contact']
 				.find(id => {
 					const section = document.getElementById(id);
 					if (!section) return false;

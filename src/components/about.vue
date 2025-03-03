@@ -15,4 +15,7 @@
 		cutting-edge technologies to solve real-world problems and continuously eager to expand
 		technical expertise in dynamic and challenging environments.
 	</p>
+	<p class="color-Normal mt-4 mb-0" style="min-height: 80px;">
+		{{ $t('short-description') }}
+	</p>
 </template>

@@ -3,8 +3,8 @@
 		"CourseName": "Secondary School (Science Stream)",
 		"SchoolName": "Sekolah Menengah Sri Omega",
 		"Description": {
-			"en": "English",
-			"zh": "中文"
+			"en": "During my secondary school years, I discovered my interest in math and physics, which led me to aspire to become an engineer in the future. I was also inspired by the movie RoboCop and developed a passion for building prosthetic parts that could help people in need, especially those who have experienced unfortunate incidents.",
+			"zh": "在中学时期，我发现自己对数学和物理充满兴趣，因此立志未来成为一名工程师。同时，我也受到电影《机械战警》(RoboCop) 的启发，产生了开发假肢的热情，希望能帮助那些因意外事故而需要它的人。"
 		},
 		"StartDate": "Jan 2013",
 		"EndDate": "Dec 2017",
@@ -14,8 +14,8 @@
 		"CourseName": "A-level (Science Stream)",
 		"SchoolName": "Crescendo International Collage",
 		"Description": {
-			"en": "English",
-			"zh": "中文"
+			"en": "During my A-levels, I delved deeper into physics, math, and biology. This broadened my perspective and gave me the idea of integrating the neural system with AI to develop prosthetic parts that can learn to interpret neural signals and execute corresponding actions.",
+			"zh": "在A-levels期间，我更深入地学习了物理、数学和生物学。这拓宽了我的视野，并让我产生了一个想法——结合神经系统与人工智能，开发能够学习解读神经信号并执行相应动作的假肢。"
 		},
 		"StartDate": "Jan 2018",
 		"EndDate": "June 2019",
@@ -25,8 +25,8 @@
 		"CourseName": "Bachelor in Computer Engineer (Major in artificial Intelligence)",
 		"SchoolName": "UCSI University",
 		"Description": {
-			"en": "English",
-			"zh": "中文"
+			"en": "When I entered university, I was introduced to computer vision, deep learning, and various other courses that further fueled my passion for robotics, artificial intelligence, and computer vision. Through hands-on projects and in-depth studies, I gained a deeper understanding of how these technologies work and how they can be applied to real-world problems. This experience not only strengthened my interest but also boosted my confidence in pursuing my dream of developing advanced prosthetic technology that seamlessly integrates with the human nervous system.",
+			"zh": "进入大学后，我接触到了计算机视觉、深度学习以及其他相关课程，这进一步激发了我对机器人技术、人工智能和计算机视觉的兴趣。通过实践项目和深入学习，我对这些技术的原理及其在现实世界中的应用有了更深入的理解。这些经历不仅加深了我的兴趣，也增强了我实现梦想的信心——开发能够与人类神经系统无缝融合的先进假肢技术。"
 		},
 		"StartDate": "Jan 2020",
 		"EndDate": "Nov 2023",

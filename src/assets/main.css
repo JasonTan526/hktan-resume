@@ -47,6 +47,10 @@ body {
 	font-size: 12px;
 }
 
+.fs-14px {
+	font-size: 14px;
+}
+
 .fs-16px {
 	font-size: 16px;
 }
@@ -82,6 +86,7 @@ body {
 	.fs-md-20px {
 		font-size: 20px;
 	}
+
 }
 
 /* CSS after 992px */
@@ -99,6 +104,22 @@ body {
 	/* Margin */
 	.mt-lg-10 {
 		margin-top: 6rem;
+	}
+
+	.mb-lg-10 {
+		margin-bottom: 6rem;
+	}
+
+	.mb-lg-15 {
+		margin-bottom: 9rem;
+	}
+
+	.mb-lg-30 {
+		margin-bottom: 18rem;
+	}
+
+	.mb-lg-35 {
+		margin-bottom: 21rem;
 	}
 
 	/* Padding */
