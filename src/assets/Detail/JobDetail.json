@@ -5,8 +5,8 @@
 		"StartDate": "Oct 2021",
 		"EndDate": "Dec 2021",
 		"JobDescription": {
-			"en": "English",
-			"zh": "中文"
+			"en": "During my first internship, I assisted in website development and redesign, improving functionality, design, and user experience. I also developed Resume Processing Software to automate resume parsing and job matching, streamlining the recruitment process. Additionally, I co-created customizable email composition and document editor tools, enhancing team productivity and efficiency.",
+			"zh": "在我的第一份实习中，我协助网站开发和改版，优化功能、设计和用户体验。此外，我开发了简历处理软件，实现自动解析和职位匹配，提高招聘效率。同时，我还共同创建了可自定义的邮件撰写和文档编辑工具，提升团队的工作效率。"
 		},
 		"SkillTool": [
 			"ReactAdmin",
@@ -21,8 +21,8 @@
 		"StartDate": "Sept 2022",
 		"EndDate": "Dec 2022",
 		"JobDescription": {
-			"en": "English",
-			"zh": "中文"
+			"en": "I led website enhancements, improving both functionality and design to enhance user experience. I collaborated on developing a Team Scheduler App, streamlining workflow and boosting team efficiency. Additionally, I contributed to an AI-driven Job Matching System, revolutionizing recruitment processes through intelligent automation. I also played a key role in creating user-friendly online platforms for salon bookings and pet services, making appointment management more seamless and accessible.",
+			"zh": "我主导了网站优化工作，提升了功能性和设计，以改善用户体验。我还参与开发了团队排班应用程序，优化工作流程并提高团队效率。此外，我贡献了人工智能驱动的职位匹配系统，通过智能自动化革新招聘流程。我还在开发适用于美容预约和宠物服务的用户友好型在线平台方面发挥了关键作用，使预约管理更加便捷和高效。"
 		},
 		"SkillTool": [
 			"Laravel",
@@ -38,8 +38,8 @@
 		"StartDate": "Dec 2023",
 		"EndDate": "Jan 2024",
 		"JobDescription": {
-			"en": "English",
-			"zh": "中文"
+			"en": "During my training as a Software Engineer at Multiverse Sdn. Bhd., I had my first hands-on experience working with backend development. Over the course of one month, I received full-stack training, where I gained proficiency in both frontend and backend technologies. I worked with HTML, CSS, JavaScript, MySQL, jQuery, and Postman, enhancing my understanding of database management, API testing, and web development best practices. This experience strengthened my ability to develop dynamic and efficient web applications.",
+			"zh": "在 Multiverse Sdn. Bhd. 担任软件工程培训生期间，我首次接触了后端开发。 在为期一个月的全栈培训中，我掌握了前端和后端技术，熟练运用 HTML、CSS、JavaScript、MySQL、jQuery 和 Postman。 我深入学习了数据库管理、API 测试以及 Web 开发的最佳实践。 这段经历强化了我开发动态高效 Web 应用的能力。"
 		},
 		"SkillTool": [
 			"HTML",
@@ -56,8 +56,8 @@
 		"StartDate": "June 2024",
 		"EndDate": "Jan 2025",
 		"JobDescription": {
-			"en": "English",
-			"zh": "中文"
+			"en": "I developed 4D dashboards for Winbox and Atas4D using Vue.js, integrating APIs to provide real-time data and a seamless user experience. Additionally, I created a Spin Wheel Game for reward distribution, enhancing user engagement and retention. To improve communication efficiency, I built a Telegram Chat Bot that automated responses and streamlined interactions. I also led the development of responsive websites using Vue.js and WordPress (Elementor, Divi, Wix), ensuring user-friendly and visually appealing designs. Furthermore, I managed the creation of 15 duplicate websites per week for SEO purposes, significantly boosting search engine visibility.",
+			"zh": "我使用 Vue.js 为 Winbox 和 Atas4D 开发了 4D 数据仪表板，集成 API 以提供实时数据并优化用户体验。此外，我创建了一个幸运转盘游戏，用于奖励发放，提高用户参与度和留存率。为提升沟通效率，我开发了一个 Telegram 聊天机器人，实现自动回复并优化互动流程。我还主导了使用 Vue.js 和 WordPress（Elementor、Divi、Wix）构建响应式网站，确保网站设计用户友好且美观。此外，我每周管理 15 个重复网站的创建，以提升 SEO 效果，大幅提高搜索引擎的可见性。"
 		},
 		"SkillTool": [
 			"Vuejs",
