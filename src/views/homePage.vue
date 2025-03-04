@@ -165,7 +165,7 @@
 					<div id="contact">
 
 						<div class="color-Header text-uppercase fw-bold fs-18px">
-							phone
+							{{ $t('phone') }}
 						</div>
 
 						<div class="d-flex color-Normal mt-2 fs-16px">
@@ -189,7 +189,7 @@
 						</div>
 
 						<div class="color-Header text-uppercase fw-bold fs-18px mt-3">
-							email
+							{{ $t('emailaddress') }}
 						</div>
 
 						<div class="d-flex color-Normal mt-2 fs-16px">
@@ -213,7 +213,7 @@
 						</div>
 
 						<div class="color-Header text-uppercase fw-bold fs-18px mt-3">
-							address
+							{{ $t('address') }}
 						</div>
 
 						<div class="d-flex color-Normal mt-2 fs-16px">
@@ -252,9 +252,6 @@
 </template>
 
 <script>
-import HobbyDetail from '@/assets/Detail/HobbyDetail.json';
-import SkillDetail from '@/assets/Detail/SkillDetail.json';
-import ReferenceDetail from '@/assets/Detail/ReferenceDetail.json';
 import { mapGetters, mapActions } from 'vuex';
 import about from '@/components/about.vue';
 import education from '@/components/education.vue';
@@ -278,14 +275,7 @@ export default {
 			y: 0,
 			isZH: false,
 			activeItem: '',
-			HobbyDetail: HobbyDetail,
-			SkillDetail: SkillDetail,
-			ReferenceDetail: ReferenceDetail
 		};
-	},
-	created() {
-		// Reverse the arrays immediately after they are loaded
-		this.ReferenceDetail = [...this.ReferenceDetail].reverse();
 	},
 	methods: {
 		update(event) {

@@ -1,6 +1,6 @@
 <template>
 	<div class="mb-4 Detail_Container rounded-3 p-lg-3">
-		<div class="DetailTitle color-Header fs-16px fs-md-20px mb-1 mb-md-2 fw-bold">AI Coding</div>
+		<div class="DetailTitle color-Header fs-16px fs-md-20px mb-1 mb-md-2 fw-bold">{{ $t('aicoding') }}</div>
 
 		<div class="d-flex flex-wrap gap-2">
 			<div v-for="(skill, skillIndex) in SkillDetail.AICoding" :key="skillIndex"
@@ -11,7 +11,7 @@
 	</div>
 
 	<div class="mb-4 Detail_Container rounded-3 p-lg-3">
-		<div class="DetailTitle color-Header fs-16px fs-md-20px mb-1 mb-md-2 fw-bold">Web Coding</div>
+		<div class="DetailTitle color-Header fs-16px fs-md-20px mb-1 mb-md-2 fw-bold">{{ $t('webcoding') }}</div>
 
 		<div class="d-flex flex-wrap gap-2">
 			<div v-for="(skill, skillIndex) in SkillDetail.WebCoding" :key="skillIndex"
@@ -22,7 +22,7 @@
 	</div>
 
 	<div class="mb-4 Detail_Container rounded-3 p-lg-3">
-		<div class="DetailTitle color-Header fs-16px fs-md-20px mb-1 mb-md-2 fw-bold">Tool</div>
+		<div class="DetailTitle color-Header fs-16px fs-md-20px mb-1 mb-md-2 fw-bold">{{ $t('tool') }}</div>
 		<div class="d-flex flex-wrap gap-2">
 			<div v-for="(skill, skillIndex) in SkillDetail.Tool" :key="skillIndex"
 				class="badge rounded-pill bg-badge color-lightgreen px-3 py-2 pointer skill-pill">
