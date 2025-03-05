@@ -19,19 +19,18 @@
 						<button class="btn btn-sm border-lightgreen color-lightgreen" type="button"
 							data-bs-toggle="collapse" :data-bs-target="'#collapse' + Index" aria-expanded="false"
 							:aria-controls="'collapse' + Index">
-							Read More
+							{{ $t('readmore') }}
 						</button>
 
 						<a :href="Education.Link" target="_blank">
 							<button class="btn btn-sm border-lightgreen color-lightgreen" type="button">
-								Learn More
+								{{ $t('learnmore') }}
 							</button>
 						</a>
-
 					</p>
 
-					<div class="collapse border-lightgreen color-lightgreen rounded-3" :id="'collapse' + Index">
-						<div class="card card-body bg-Normal">
+					<div class="collapse border-lightgreen color-Header rounded-3" :id="'collapse' + Index">
+						<div class="card card-body bg-Normal fs-14px">
 							{{ isChinese ? Education.Description.zh : Education.Description.en }}
 						</div>
 					</div>

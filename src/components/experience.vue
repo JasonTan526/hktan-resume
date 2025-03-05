@@ -11,9 +11,21 @@
 				<div class="color-Normal mb-2">
 					{{ Job.Company }}
 				</div>
-				<div class="color-Normal mb-3">
-					{{ isChinese ? Job.JobDescription.zh : Job.JobDescription.en }}
+
+				<p class="d-inline-flex gap-2">
+					<button class="btn btn-sm border-lightgreen color-lightgreen" type="button"
+						data-bs-toggle="collapse" :data-bs-target="'#collapse-experience' + Index" aria-expanded="false"
+						:aria-controls="'collapse' + Index">
+						{{ $t('readmore') }}
+					</button>
+				</p>
+
+				<div class="collapse border-lightgreen color-Header rounded-3 mb-2" :id="'collapse-experience' + Index">
+					<div class="card card-body bg-Normal fs-14px">
+						{{ isChinese ? Job.JobDescription.zh : Job.JobDescription.en }}
+					</div>
 				</div>
+
 				<div class="d-flex flex-wrap gap-2">
 					<div v-for="(skill, skillIndex) in Job.SkillTool" :key="skillIndex"
 						class="badge rounded-pill bg-badge color-lightgreen px-3 py-2 skill-pill">
