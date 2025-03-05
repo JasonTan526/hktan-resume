@@ -1,7 +1,8 @@
 <template>
 	<div class="Detail_Container rounded-3 p-lg-3 mb-3 mb-lg-2 pointer" v-for="(Education, Index) in EducationDetail"
 		:key="Index">
-		<a class="d-flex flex-column flex-lg-row text-decoration-none" :href="Education.Link" target="_blank">
+		<!-- <a class="d-flex flex-column flex-lg-row text-decoration-none" :href="Education.Link" target="_blank"> -->
+		<div class="d-flex flex-column flex-lg-row text-decoration-none">
 			<div class="color-Normal fs-12px my-1 w-lg-25">
 				{{ Education.StartDate }} ~ {{ Education.EndDate }}
 			</div>
@@ -12,12 +13,31 @@
 				<div class="color-Normal mb-2">
 					{{ Education.SchoolName }}
 				</div>
-				<div class="color-Normal">
-					{{ isChinese ? Education.Description.zh : Education.Description.en }}
+
+				<div>
+					<p class="d-inline-flex gap-2">
+						<button class="btn btn-sm border-lightgreen color-lightgreen" type="button"
+							data-bs-toggle="collapse" :data-bs-target="'#collapse' + Index" aria-expanded="false"
+							:aria-controls="'collapse' + Index">
+							Read More
+						</button>
+
+						<a :href="Education.Link" target="_blank">
+							<button class="btn btn-sm border-lightgreen color-lightgreen" type="button">
+								Learn More
+							</button>
+						</a>
+
+					</p>
+
+					<div class="collapse border-lightgreen color-lightgreen rounded-3" :id="'collapse' + Index">
+						<div class="card card-body bg-Normal">
+							{{ isChinese ? Education.Description.zh : Education.Description.en }}
+						</div>
+					</div>
 				</div>
 			</div>
-		</a>
-
+		</div>
 	</div>
 </template>
 
