@@ -127,6 +127,26 @@ body {
 		margin-bottom: 21rem;
 	}
 
+	.mb-lg-40 {
+		margin-bottom: 24rem;
+	}
+
+	.mb-lg-45 {
+		margin-bottom: 27rem;
+	}
+
+	.mb-lg-50 {
+		margin-bottom: 30rem;
+	}
+
+	.mb-lg-55 {
+		margin-bottom: 33rem;
+	}
+
+	.mb-lg-60 {
+		margin-bottom: 36rem;
+	}
+
 	/* Padding */
 	.py-lg-5-i {
 		padding-top: 3rem;
