@@ -157,91 +157,41 @@
 					</div>
 				</div>
 
-				<div class="pb-5 mb-lg-60">
+				<div class="pb-5 mb-lg-55">
 					<h5 class="text-uppercase color-Header fw-bold sticky-top mb-0 py-4 bg-Normal-75-blur d-lg-none">
 						contact
 					</h5>
 
-					<div id="contact" class="Detail_Container rounded-3 p-lg-3 mb-3 mb-lg-2 pointer">
+					<div id="contact" class="rounded-3 p-lg-3 mb-3 mb-lg-2 pointer">
 
-						<!-- <div class="color-Header text-uppercase fw-bold fs-18px">
-							{{ $t('phone') }}
+						<div class="mb-3">
+							<div class="color-Header text-uppercase fw-bold fs-18px ms-lg-3">
+								{{ $t('emailaddress') }}
+							</div>
+
+							<div class="d-flex color-Normal mt-2 fs-16px ms-lg-3">
+
+								<div class="DetailTitle">
+									jasontanhengkern@gmail.com
+								</div>
+							</div>
 						</div>
 
-						<div class="d-flex color-Normal mt-2 fs-16px">
-							<div>
-								MY:
-							</div>
-
-							<div class="ms-1">
-								+60-18 772 8526
-							</div>
-						</div>
-
-						<div class="d-flex color-Normal mt-2 fs-16px">
-							<div>
-								SG:
-							</div>
-
-							<div class="ms-1">
-								+65-8425 2922
-							</div>
-						</div> -->
 
 						<div class="color-Header text-uppercase fw-bold fs-18px ms-lg-3">
-							{{ $t('emailaddress') }}
+							{{ $t('resume') }}
 						</div>
-
-						<!-- <div class="d-flex color-Normal mt-2 fs-16px">
-							<div>
-								Personal:
-							</div>
-
-							<div class="ms-1">
-								hktan0526@gmail.com
-							</div>
-						</div> -->
 
 						<div class="d-flex color-Normal mt-2 fs-16px ms-lg-3">
-							<!-- <div>
-								Work:
-							</div> -->
 
-							<div class="DetailTitle">
-								jasontanhengkern@gmail.com
+							<div class="DetailTitle text-decoration-underline">
+								<a class="DetailTitle" style="color: rgb(148 163 184)" href="/Resume_Jason Tan.pdf"
+									download>
+									Click Here to Download
+								</a>
 							</div>
+
 						</div>
-
-						<!-- <div class="color-Header text-uppercase fw-bold fs-18px mt-3">
-							{{ $t('address') }}
-						</div>
-
-						<div class="d-flex color-Normal mt-2 fs-16px">
-
-							<div>
-								MY:
-							</div>
-
-							<div class="ms-1">
-								187, Jalan Impian Emas 59,
-								<br>
-								Taman Impian Emas,
-								<br>
-								81300 Skudai, Johor
-							</div>
-						</div>
-
-						<div class="d-flex color-Normal mt-1 fs-16px">
-							<div>
-								SG:
-							</div>
-
-							<div class="ms-1">
-								Blk 419 Fajar Road
-								<br>
-								#10-457 Singapore 670419
-							</div>
-						</div> -->
 
 					</div>
 				</div>
@@ -365,12 +315,9 @@ export default {
 	color: rgb(226 232 240) !important;
 }
 
-.DetailTitle {
-	transition: all 0.1s;
-}
-
-.Detail_Container:hover .DetailTitle {
+.DetailTitle:hover {
 	color: rgb(94 234 212) !important;
+	transition: all 0.1s;
 }
 
 .item-tail {
@@ -385,18 +332,5 @@ export default {
 .contentTitle:hover .item-tail {
 	width: 60px !important;
 	background-color: rgb(226, 232, 240) !important;
-}
-
-/* CSS after 992 px */
-@media (min-width: 992px) {
-	.Detail_Container {
-		transition: all 0.3s;
-	}
-
-	.Detail_Container:hover {
-		background-color: rgba(30, 41, 59, .5);
-		box-shadow: 0 0 #0000, 0 0 #0000, inset 0 1px 0 0 rgba(148, 163, 184, .1);
-
-	}
 }
 </style>
